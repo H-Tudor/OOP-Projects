@@ -7,7 +7,7 @@
 
         public GiantKillerRobot() : base() { }
 
-        public void FireLaserAt()
+        public void FireLaserAtCurrentTarget()
         {
             if (EyeLaserIntensity >= LaserIntensity.KILL)
             {

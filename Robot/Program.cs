@@ -6,7 +6,7 @@ namespace Robot {
 
 		public static void Main(string[] args) {
 			GiantKillerRobot robot = new GiantKillerRobot();
-			robot.initialize();
+			robot.Initialize();
 
 			robot.EyeLaserIntensity = LaserIntensity.KILL;
 			robot.TargetTypes = new List<LivingEntityType>() { LivingEntityType.ANIMAL, LivingEntityType.HUMAN, LivingEntityType.SUPERHERO };
@@ -15,7 +15,7 @@ namespace Robot {
 
 			while(robot.Active && earth.ContainsLife) {
 				if(robot.CurrentTarget.IsAlive) {
-					robot.FireLaserAt();
+					robot.FireLaserAtCurrentTarget();
 				} else {
 					robot.AcquireNextTarget();	
 				}

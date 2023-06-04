@@ -8,7 +8,7 @@
 
         public Robot() { }
 
-        public void initialize()
+        public void Initialize()
         {
             Active = true;
         }
